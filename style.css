@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: #000;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  padding: 10px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 400px;
+}
+
+.glow-text {
+  color: #f82ba3;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 40px;
+  text-shadow: 0 0 5px #f82ba3, 0 0 10px #f82ba3, 0 0 20px #ff0080;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #f82ba3, 0 0 10px #f82ba3, 0 0 20px #ff0080;
+  }
+  to {
+    text-shadow: 0 0 20px #ff66b2, 0 0 30px #ff3399, 0 0 40px #ff0080;
+  }
+}
+
+.image-container p {
+  color: #36e20b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+  border-radius: 20px;
+  background: #ac0e6a;
+  margin-bottom: 12px;
+}
+
+.talk {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.talk i {
+  font-size: 30px;
+  color: #aed0d0;
+}
+
+.content {
+  color: #1bf726;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+/* Voice wave animation */
+.voice-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 5px;
+}
+
+.voice-wave span {
+  display: inline-block;
+  width: 5px;
+  height: 20px;
+  background: #1bf726;
+  animation: wave 1s infinite ease-in-out;
+}
+
+.voice-wave span:nth-child(2) { animation-delay: 0.1s; }
+.voice-wave span:nth-child(3) { animation-delay: 0.2s; }
+.voice-wave span:nth-child(4) { animation-delay: 0.3s; }
+.voice-wave span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 40%, 100% { transform: scaleY(0.4); }
+  20% { transform: scaleY(1); }
+}
